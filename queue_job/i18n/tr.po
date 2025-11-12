@@ -6,22 +6,21 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Odoo Server 16.0\n"
 "Report-Msgid-Bugs-To: \n"
-"PO-Revision-Date: 2025-06-13 15:27+0000\n"
-"Last-Translator: Betül Öğmen <betulo@eska.biz>\n"
+"PO-Revision-Date: 2025-01-29 22:06+0000\n"
+"Last-Translator: Ahmet Yiğit Budak <yigit@altinkaya.com>\n"
 "Language-Team: none\n"
 "Language: tr\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: \n"
 "Plural-Forms: nplurals=2; plural=n != 1;\n"
-"X-Generator: Weblate 5.10.4\n"
+"X-Generator: Weblate 5.6.2\n"
 
 #. module: queue_job
 #: model_terms:ir.ui.view,arch_db:queue_job.view_queue_job_form
 msgid ""
 "<br/>\n"
-"                            <span class=\"oe_grey oe_inline\"> If the max. "
-"retries is 0, the number of retries is infinite.</span>"
+"                            <span class=\"oe_grey oe_inline\"> If the max. retries is 0, the number of retries is infinite.</span>"
 msgstr ""
 "<br/>\n"
 "                            <span class=\"oe_grey oe_inline\"> Eğer maks. "
@@ -67,18 +66,18 @@ msgstr "Argümanlar"
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_attachment_count
 msgid "Attachment Count"
-msgstr "Ek Sayısı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.actions.server,name:queue_job.ir_cron_autovacuum_queue_jobs_ir_actions_server
 #: model:ir.cron,cron_name:queue_job.ir_cron_autovacuum_queue_jobs
 msgid "AutoVacuum Job Queue"
-msgstr "Otomatik Temizleme İş Kuyruğu"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model,name:queue_job.model_base
 msgid "Base"
-msgstr "Temel"
+msgstr ""
 
 #. module: queue_job
 #: model_terms:ir.ui.view,arch_db:queue_job.view_requeue_job
@@ -174,7 +173,6 @@ msgstr "Oluşturulma Tarihi"
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__create_uid
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__create_uid
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled__create_uid
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done__create_uid
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job__create_uid
@@ -188,7 +186,6 @@ msgstr "Oluşturulma tarihi"
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__create_date
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__create_date
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled__create_date
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done__create_date
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job__create_date
@@ -235,7 +232,6 @@ msgstr "Açıklama"
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__display_name
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__display_name
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_function__display_name
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__display_name
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled__display_name
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done__display_name
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job__display_name
@@ -293,7 +289,7 @@ msgstr "İstisna:"
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__eta
 msgid "Execute only after"
-msgstr "Bundan sonra çalıştır"
+msgstr "Sadece bundan sonra çalıştır"
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__exec_time
@@ -366,7 +362,6 @@ msgstr "Mesajı Var"
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__id
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__id
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_function__id
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__id
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled__id
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done__id
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job__id
@@ -389,14 +384,21 @@ msgid "Identity Key"
 msgstr "Benzersiz Anahtar"
 
 #. module: queue_job
+#. odoo-python
+#: code:addons/queue_job/models/queue_job.py:0
+#, python-format
+msgid "If both parameters are 0, ALL jobs will be requeued!"
+msgstr "Her iki parametre de 0 ise, TÜM işler tekrar sıraya alınacaktır!"
+
+#. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job__message_needaction
 msgid "If checked, new messages require your attention."
-msgstr "İşaretlenirse, sizi bekleyen mesajlar var."
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job__message_has_error
 msgid "If checked, some messages have a delivery error."
-msgstr "İşaretlenirse, bazı mesajlar teslimat hatası içerir."
+msgstr ""
 
 #. module: queue_job
 #. odoo-python
@@ -408,7 +410,7 @@ msgstr "Geçersiz iş fonksiyonu: {}"
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_is_follower
 msgid "Is Follower"
-msgstr "Takipçi"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model,name:queue_job.model_queue_job_channel
@@ -473,6 +475,12 @@ msgid "Jobs"
 msgstr "İşler"
 
 #. module: queue_job
+#: model:ir.actions.server,name:queue_job.ir_cron_queue_job_garbage_collector_ir_actions_server
+#: model:ir.cron,cron_name:queue_job.ir_cron_queue_job_garbage_collector
+msgid "Jobs Garbage Collector"
+msgstr "İş Çöp Toplayıcısı"
+
+#. module: queue_job
 #. odoo-python
 #: code:addons/queue_job/models/queue_job.py:0
 #, python-format
@@ -503,30 +511,27 @@ msgstr "Son 7 gün"
 #: model:ir.model.fields,field_description:queue_job.field_queue_job____last_update
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel____last_update
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_function____last_update
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock____last_update
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled____last_update
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done____last_update
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job____last_update
 msgid "Last Modified on"
-msgstr "Son Değiştirme"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__write_uid
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__write_uid
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled__write_uid
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done__write_uid
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job__write_uid
 msgid "Last Updated by"
-msgstr "Son Güncelleyen"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__write_date
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__write_date
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_cancelled__write_date
 #: model:ir.model.fields,field_description:queue_job.field_queue_jobs_to_done__write_date
 #: model:ir.model.fields,field_description:queue_job.field_queue_requeue_job__write_date
 msgid "Last Updated on"
-msgstr "Son Güncelleme"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_main_attachment_id
@@ -548,22 +553,22 @@ msgstr "Maks. deneme"
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_has_error
 msgid "Message Delivery error"
-msgstr "Mesaj Teslimat hatası"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_ids
 msgid "Messages"
-msgstr "Mesajlar"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_function__method
 msgid "Method"
-msgstr "Yöntem"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__method_name
 msgid "Method Name"
-msgstr "Yöntem Adı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__model_name
@@ -577,132 +582,116 @@ msgstr ""
 #: code:addons/queue_job/models/queue_job_function.py:0
 #, python-format
 msgid "Model {} not found"
-msgstr "Model {} bulunamadı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__my_activity_date_deadline
 msgid "My Activity Deadline"
-msgstr "Aktivite Son Tarihim"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__name
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_function__name
 msgid "Name"
-msgstr "Ad"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__activity_date_deadline
 msgid "Next Activity Deadline"
-msgstr "Sonraki Aktivite Son Tarihi"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__activity_summary
 msgid "Next Activity Summary"
-msgstr "Sonraki Aktivite Özeti"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__activity_type_id
 msgid "Next Activity Type"
-msgstr "Sonraki Aktivite Türü"
+msgstr ""
 
 #. module: queue_job
 #. odoo-python
 #: code:addons/queue_job/models/queue_job.py:0
 #, python-format
 msgid "No action available for this job"
-msgstr "Bu iş için uygun bir eylem yok"
+msgstr ""
 
 #. module: queue_job
 #. odoo-python
 #: code:addons/queue_job/models/queue_job.py:0
 #, python-format
 msgid "Not allowed to change field(s): {}"
-msgstr "Alan(lar)ı değiştirme izni yok: {}"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_needaction_counter
 msgid "Number of Actions"
-msgstr "Eylem Sayısı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__message_has_error_counter
 msgid "Number of errors"
-msgstr "Hata sayısı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job__message_needaction_counter
 msgid "Number of messages requiring action"
-msgstr "Eylem gerektiren mesaj sayısı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job__message_has_error_counter
 msgid "Number of messages with delivery error"
-msgstr "Teslimat hatası içeren mesaj sayısı"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__parent_id
 msgid "Parent Channel"
-msgstr "Üst Kanal"
+msgstr ""
 
 #. module: queue_job
 #. odoo-python
 #: code:addons/queue_job/models/queue_job_channel.py:0
 #, python-format
 msgid "Parent channel required."
-msgstr "Üst kanal gerekli."
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job_function__edit_retry_pattern
 msgid ""
-"Pattern expressing from the count of retries on retryable errors, the number "
-"of of seconds to postpone the next execution. Setting the number of seconds "
-"to a 2-element tuple or list will randomize the retry interval between the 2 "
-"values.\n"
+"Pattern expressing from the count of retries on retryable errors, the number of of seconds to postpone the next execution. Setting the number of seconds to a 2-element tuple or list will randomize the retry interval between the 2 values.\n"
 "Example: {1: 10, 5: 20, 10: 30, 15: 300}.\n"
 "Example: {1: (1, 10), 5: (11, 20), 10: (21, 30), 15: (100, 300)}.\n"
 "See the module description for details."
 msgstr ""
-"Yeniden denenebilir hatalarda yeniden deneme sayısından, bir sonraki "
-"çalışmanın ertelenmesi için saniye sayısını ifade eden desen. Saniye "
-"sayısını 2 elemanlı bir demet veya liste olarak ayarlama, yeniden deneme "
-"aralığını 2 değer arasında rastgele hale getirir.\n"
-"Örneğin: {1: 10, 5: 20, 10: 30, 15: 300}.\n"
-"Örneğin: {1: (1, 10), 5: (11, 20), 10: (21, 30), 15: (100, 300)}.\n"
-"Ayrıntılar için modül açıklamasına bakınız."
 
 #. module: queue_job
 #: model:ir.model.fields.selection,name:queue_job.selection__queue_job__state__pending
 #: model_terms:ir.ui.view,arch_db:queue_job.view_queue_job_search
 msgid "Pending"
-msgstr "Beklemede"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__priority
 msgid "Priority"
-msgstr "Öncelik"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.ui.menu,name:queue_job.menu_queue
 msgid "Queue"
-msgstr "Sıra"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model,name:queue_job.model_queue_job
-#: model:ir.model.fields,field_description:queue_job.field_queue_job_lock__queue_job_id
 msgid "Queue Job"
-msgstr "Kuyruk İşi"
-
-#. module: queue_job
-#: model:ir.model,name:queue_job.model_queue_job_lock
-msgid "Queue Job Lock"
-msgstr "Kuyruk İş Kilidi"
+msgstr ""
 
 #. module: queue_job
 #. odoo-python
 #: code:addons/queue_job/models/queue_job.py:0
 #, python-format
 msgid "Queue jobs must be created by calling 'with_delay()'."
-msgstr "Kuyruk işleri 'with_delay()' çağrılarak oluşturulmalıdır."
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__record_ids
@@ -746,28 +735,28 @@ msgstr "İlgili Kayıtlar"
 #. module: queue_job
 #: model_terms:ir.ui.view,arch_db:queue_job.view_queue_job_tree
 msgid "Remaining days to execute"
-msgstr "Çalıştırılacak kalan günler"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job_channel__removal_interval
 msgid "Removal Interval"
-msgstr "Kaldırma Aralığı"
+msgstr ""
 
 #. module: queue_job
 #: model_terms:ir.ui.view,arch_db:queue_job.view_requeue_job
 msgid "Requeue"
-msgstr "Yeniden sıraya al"
+msgstr ""
 
 #. module: queue_job
 #: model_terms:ir.ui.view,arch_db:queue_job.view_queue_job_form
 msgid "Requeue Job"
-msgstr "İşi yeniden sıraya al"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.actions.act_window,name:queue_job.action_requeue_job
 #: model_terms:ir.ui.view,arch_db:queue_job.view_requeue_job
 msgid "Requeue Jobs"
-msgstr "İşleri Tekrar Sıraya Al"
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__activity_user_id
@@ -861,10 +850,6 @@ msgid ""
 "Today: Activity date is today\n"
 "Planned: Future activities."
 msgstr ""
-"Aktivitelere dayalı durum\n"
-"Geçikmiş: Son tarih zaten geçti\n"
-"Bugün: Aktivite tarihi bugün\n"
-"Planlandı: Gelecekteki aktiviteler."
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__func_string
@@ -874,15 +859,9 @@ msgstr "Görev"
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job_function__edit_related_action
 msgid ""
-"The action when the button *Related Action* is used on a job. The default "
-"action is to open the view of the record related to the job. Configured as a "
-"dictionary with optional keys: enable, func_name, kwargs.\n"
+"The action when the button *Related Action* is used on a job. The default action is to open the view of the record related to the job. Configured as a dictionary with optional keys: enable, func_name, kwargs.\n"
 "See the module description for details."
 msgstr ""
-"İşteki *İlgili Eylem* düğmesi kullanıldığında gerçekleşen eylem. Varsayılan "
-"eylem, işle ilişkili kaydın görünümünü açmaktır. İsteğe bağlı anahtarlar ile "
-"yapılandırılmış bir sözlük: etkinleştir, func_name, kwargs.\n"
-"Ayrıntılar için modül açıklamasına bakınız."
 
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job__max_retries
@@ -923,7 +902,7 @@ msgstr ""
 #. module: queue_job
 #: model:ir.model.fields,help:queue_job.field_queue_job__activity_exception_decoration
 msgid "Type of the exception activity on record."
-msgstr "Kayıttaki istisna aktivitesinin türü."
+msgstr ""
 
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__uuid
@@ -937,13 +916,12 @@ msgstr "UUID"
 msgid ""
 "Unexpected format of Related Action for {}.\n"
 "Example of valid format:\n"
-"{{\"enable\": True, \"func_name\": \"related_action_foo\", "
-"\"kwargs\" {{\"limit\": 10}}}}"
+"{{\"enable\": True, \"func_name\": \"related_action_foo\", \"kwargs\" {{\"limit\": 10}}}}"
 msgstr ""
 "İlgili eylem için beklenmeyen biçim {}.\n"
 "Doğru biçim örneği:\n"
-"{{\"enable\": True, \"func_name\": \"related_action_foo\", "
-"\"kwargs\" {{\"limit\": 10}}}}"
+"{{\"enable\": True, \"func_name\": \"related_action_foo\", \"kwargs\" {{"
+"\"limit\": 10}}}}"
 
 #. module: queue_job
 #. odoo-python
@@ -969,7 +947,7 @@ msgstr "Kullanıcı ID"
 #: model:ir.model.fields.selection,name:queue_job.selection__queue_job__state__wait_dependencies
 #: model_terms:ir.ui.view,arch_db:queue_job.view_queue_job_search
 msgid "Wait Dependencies"
-msgstr "Bağımlılıklar Bekleniyor"
+msgstr "Bağımlılıkları Bekle"
 
 #. module: queue_job
 #: model:ir.model,name:queue_job.model_queue_requeue_job
@@ -979,11 +957,4 @@ msgstr "Seçilen işleri tekrar sıraya alan sihirbaz"
 #. module: queue_job
 #: model:ir.model.fields,field_description:queue_job.field_queue_job__worker_pid
 msgid "Worker Pid"
-msgstr "Çalışan Pid"
-
-#, python-format
-#~ msgid "If both parameters are 0, ALL jobs will be requeued!"
-#~ msgstr "Her iki parametre de 0 ise, TÜM işler tekrar sıraya alınacaktır!"
-
-#~ msgid "Jobs Garbage Collector"
-#~ msgstr "İş Çöp Toplayıcısı"
+msgstr ""
